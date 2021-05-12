@@ -6,4 +6,6 @@ public interface SecurityService {
 	
 	String getSubjectFromJWT(String token);
 
+	boolean checkClaims(String subject, String token);
+
 }

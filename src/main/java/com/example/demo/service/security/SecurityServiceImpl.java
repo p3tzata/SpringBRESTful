@@ -51,10 +51,28 @@ public class SecurityServiceImpl implements SecurityService {
 					 .parseClaimsJws(token)
 					 .getBody();
 		
+		if(claims==null || claims.getSubject()==null) {
+			throw new IllegalArgumentException("Token error: Claims or subject is null");
+		}
+		
 		return claims.getSubject();
 		
 		
 	}
+	
+	@Override
+	public boolean checkClaims(String subject, String token) {
+		
+		String subjectFromJWT = this.getSubjectFromJWT(token);
+		
+		if(subjectFromJWT.equals(subject)) {
+			return true;
+		}
+		
+		return false;
+		
+	}
+	
 	
 	
 	
