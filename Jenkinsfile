@@ -27,13 +27,11 @@ pipeline {
     	
     	     steps {
     	     	echo "Deploying stage...";
+    	     	sh "cp target/*.war /opt/webapps/"
     	     }
     	    
     	}
     	
-
-        
-        
     }
 
     
