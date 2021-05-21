@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>SpringBRESTful</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>SpringBRESTful</name>
 	<description>Demo project for Spring Boot</description>
@@ -53,6 +53,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>		
+	
+	
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<scope>test</scope>
+</dependency>
 		
 		
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
